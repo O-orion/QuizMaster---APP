@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
       borderRadius: 10,
       marginVertical: 5,
       elevation: 3,
+      width: 350
     },
     optionText: {
       fontFamily: "InterRegular",
