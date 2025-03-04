@@ -1,12 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import { Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
+
+  const [ fontsLoaded ] = useFonts({
+    regular: Inter_400Regular,
+    bold: Inter_700Bold
+  })
+
+  if (!fontsLoaded) return null;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StatusBar style='light' />
+    </NavigationContainer>
   );
 }
 
